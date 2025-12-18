@@ -1,5 +1,5 @@
-const API_URL = "https://full-stack-backend-xarr.onrender.com";
 import React, { createContext, useState, useContext, useEffect } from 'react';
+const API_URL = "https://full-stack-backend-xarr.onrender.com";
 
 const RechargeContext = createContext();
 
