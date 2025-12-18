@@ -1,0 +1,138 @@
+.jio-home {
+  min-height: calc(100vh - 140px);
+  color: var(--text-primary);
+}
+
+/* Hero Section */
+.hero-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
+  gap: 32px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 24px auto;
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border: var(--glass-border);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.quick-plans,
+.features-section,
+.support-section {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 32px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  border: var(--glass-border);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.quick-plans h2,
+.features-section h2,
+.support-section h2 {
+  margin-bottom: 20px;
+}
+
+.plans-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.plan-card {
+  background: var(--bg-glass-heavy);
+  backdrop-filter: blur(5px);
+  border: var(--glass-border);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-blue);
+}
+
+.plan-price {
+  font-size: 28px;
+  color: var(--primary-blue);
+  font-weight: 800;
+}
+
+.plan-validity {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.plan-details p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.feature-card {
+  border: 1px solid var(--border-neutral);
+  border-radius: 14px;
+  padding: 18px;
+  background: var(--bg-white);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+}
+
+.feature-card h3 {
+  margin: 10px 0 6px;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 24px;
+  }
+
+  .quick-plans,
+  .features-section,
+  .support-section {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,6 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <rect x="15" y="25" width="70" height="50" fill="#6c63ff" rx="8" stroke="#0056b3" stroke-width="2"/>
+  <text x="50" y="65" font-size="24" font-weight="bold" fill="#fff" text-anchor="middle">₹99</text>
+  <path d="M 30 20 L 35 10 L 40 20 Z" fill="#007bff"/>
+  <path d="M 70 20 L 75 10 L 80 20 Z" fill="#007bff"/>
+</svg>

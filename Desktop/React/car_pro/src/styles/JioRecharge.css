@@ -1,0 +1,161 @@
+.jio-recharge-page {
+  min-height: calc(100vh - 140px);
+  padding: 32px 16px;
+}
+
+.recharge-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.recharge-box,
+.recharge-info {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  border: var(--glass-border);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.recharge-box:hover,
+.recharge-info:hover {
+  background: var(--bg-glass-heavy);
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.recharge-box h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 2px 0 16px;
+}
+
+.error-message {
+  background: #fff5f5;
+  border: 1px solid var(--error);
+  color: var(--error);
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-neutral);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.08);
+}
+
+.char-count {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.btn-block {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.recharge-info h3 {
+  margin: 0;
+}
+
+.recharge-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recharge-info li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.benefits-image-container {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.benefits-illustration {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 12px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+  animation: benefitsFloat 4s ease-in-out infinite;
+}
+
+@keyframes benefitsFloat {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+  .recharge-container {
+    grid-template-columns: 1fr;
+  }
+}

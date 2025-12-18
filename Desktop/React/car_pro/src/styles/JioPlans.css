@@ -1,0 +1,163 @@
+.jio-plans-page {
+  min-height: calc(100vh - 140px);
+  padding: 32px 16px;
+  position: relative;
+  /* Grid pattern is now global in Theme.css */
+}
+
+.plans-header {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 24px;
+}
+
+.plans-header h1 {
+  margin: 6px 0;
+}
+
+.plans-header p {
+  color: var(--text-secondary);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.plans-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.plan-card {
+  background: var(--bg-glass-heavy);
+  backdrop-filter: blur(8px);
+  border: var(--glass-border);
+  border-radius: 20px;
+  padding: 20px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.plan-card:hover {
+  transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+  border-color: var(--primary-blue);
+  box-shadow: 0 20px 40px rgba(225, 29, 72, 0.12);
+  background: white;
+}
+
+.plan-card.selected {
+  border-color: var(--primary-dark);
+  box-shadow: 0 16px 34px rgba(225, 29, 72, 0.12);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(225, 29, 72, 0.06);
+  color: var(--primary-dark);
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.plan-header {
+  margin-bottom: 12px;
+}
+
+.plan-price {
+  font-size: 30px;
+  color: var(--primary-blue);
+  font-weight: 800;
+  margin: 0;
+}
+
+.plan-validity {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 2px 0 0;
+}
+
+.plan-content {
+  margin: 12px 0;
+  flex-grow: 1;
+}
+
+.plan-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.plan-item .label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.plan-item .value {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin: 0;
+}
+
+.plan-benefits {
+  background: var(--bg-light);
+  border: 1px solid var(--border-neutral);
+  border-radius: 12px;
+  padding: 12px;
+  margin: 10px 0 16px;
+}
+
+.plan-benefits h4 {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.plan-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.plan-benefits li {
+  font-size: 13px;
+  color: var(--text-primary);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.plans-footer {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .plans-container {
+    grid-template-columns: 1fr;
+  }
+}
