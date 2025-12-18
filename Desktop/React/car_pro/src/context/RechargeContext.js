@@ -1,3 +1,4 @@
+const API_URL = "https://full-stack-backend-xarr.onrender.com";
 import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const RechargeContext = createContext();
@@ -19,7 +20,7 @@ export const RechargeProvider = ({ children }) => {
 
   const fetchPlans = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/plans');
+      const response = await fetch('${API_URL}/api/plans');
       const data = await response.json();
       setPlans(data);
     } catch (error) {
@@ -41,7 +42,7 @@ export const RechargeProvider = ({ children }) => {
 
   const updatePlan = async (updatedPlan) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/plans/${updatedPlan.id}`, {
+      const response = await fetch(`${API_URL}/api/plans/${updatedPlan.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedPlan)
@@ -60,7 +61,7 @@ export const RechargeProvider = ({ children }) => {
 
   const addPlan = async (newPlan) => {
     try {
-      const response = await fetch('http://localhost:5000/api/plans', {
+      const response = await fetch('${API_URL}/api/plans', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newPlan)
